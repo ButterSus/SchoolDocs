@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="ru" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>В путь! - Документация к ОГЭ для 9Б класса</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Уважаю всех кто готовится по этому сайту)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="/assets/favicon.png">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./theme/themes.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "coal" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html" class="active">В путь!</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Русский язык</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="01/overview.html"><strong aria-hidden="true">1.1.</strong> Информация</a></li><li class="chapter-item expanded "><a href="01/9/overview.html"><strong aria-hidden="true">1.2.</strong> Сочинение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="01/9/examples.html"><strong aria-hidden="true">1.2.1.</strong> Примеры сочинений</a></li><li class="chapter-item expanded "><a href="01/9/criteria.html"><strong aria-hidden="true">1.2.2.</strong> Критерии оценивания</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Математика</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="02/overview.html"><strong aria-hidden="true">2.1.</strong> Информация</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Документация к ОГЭ для 9Б класса</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="Материалы-для-ОГЭ"><a class="header" href="#Материалы-для-ОГЭ">Материалы для ОГЭ</a></h1>
+<p><em>Сделано специально для учеников 9А/Б класса МОБУ ФТЛ им. В.П. Ларионова!</em></p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>Привет! Здесь я постарался собрать материалы, которые помогут вам в подготовке
+к ОГЭ.</p>
+</div>
+</div>
+<div class="docs-card-container">
+<div id="admonition-Русский-язык" class="admonition quote docs-card">
+<div class="admonition-title">
+<p>Русский язык</p>
+<p><a class="admonition-anchor-link" href="#admonition-Русский-язык"></a></p>
+</div>
+<div>
+<a class="docs-card-link" href="http://localhost:3000/01/overview.html">
+<div class="docs-card-visit">
+    <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+        "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<p>
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+         width="72px" height="72px" viewBox="0 0 1258.000000 1280.000000"
+         preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+           stroke="none">
+            <path d="M2831 12743 c-17 -35 -293 -723 -426 -1065 l-57 -147 -42 -5 c-22 -3
+-322 -10 -666 -16 -344 -7 -626 -13 -628 -15 -2 -2 113 -96 255 -211 418 -336
+674 -556 709 -609 14 -22 14 -34 -6 -137 -29 -156 -65 -294 -185 -723 -127
+-455 -127 -456 -122 -462 10 -10 41 9 511 316 425 278 647 411 685 411 49 0
+183 -79 752 -441 224 -143 411 -259 417 -259 22 0 -36 216 -168 625 -106 326
+-179 572 -187 630 -5 39 -3 43 41 82 26 23 167 133 314 244 462 351 652 504
+652 525 0 21 -86 24 -702 30 -433 4 -600 9 -606 17 -5 7 -75 184 -156 394 -81
+211 -176 452 -211 537 -64 154 -141 316 -150 316 -2 0 -13 -17 -24 -37z"/>
+            <path d="M7510 11885 c0 -14 40 -51 270 -251 159 -138 674 -651 811 -809 390
+-446 709 -903 953 -1365 450 -853 676 -1689 676 -2505 0 -552 -80 -956 -282
+-1430 -68 -159 -183 -393 -254 -516 -63 -108 -190 -279 -208 -279 -8 0 -36 24
+-63 54 -26 30 -183 197 -348 372 -525 558 -1684 1807 -2030 2189 -362 399
+-502 585 -478 635 9 21 200 183 1011 859 326 271 592 497 590 502 -10 26 -634
+689 -650 689 -5 0 -91 -40 -191 -89 -283 -140 -553 -240 -746 -278 -158 -31
+-378 -17 -750 47 -63 11 -119 16 -125 13 -33 -20 -974 -794 -2284 -1881 -725
+-601 -811 -675 -800 -691 34 -46 1124 -1400 1147 -1424 l27 -27 64 53 c470
+385 740 602 855 689 163 121 331 241 361 256 19 10 40 -8 215 -186 724 -732
+1798 -1882 2458 -2632 85 -96 166 -187 179 -202 34 -38 23 -48 -104 -98 -213
+-83 -494 -145 -773 -171 -192 -17 -641 -6 -836 20 -491 66 -910 183 -1343 372
+-427 187 -705 375 -1252 845 -203 175 -309 261 -385 316 -98 69 -50 94 -457
+-239 -609 -498 -2164 -1797 -2665 -2225 l-93 -79 37 -72 c66 -133 219 -350
+412 -587 167 -205 734 -870 741 -870 11 0 312 221 550 404 304 234 498 392
+1175 960 346 290 640 535 653 543 15 11 26 12 35 5 127 -101 595 -449 692
+-514 306 -204 677 -401 990 -526 1050 -419 2175 -464 3205 -130 183 59 313
+111 617 247 150 66 277 121 282 121 11 0 169 -172 626 -680 176 -195 391 -434
+479 -530 220 -241 715 -760 732 -767 38 -14 1271 1108 1322 1203 9 16 -25 57
+-225 274 -345 373 -562 614 -894 990 -544 618 -529 600 -529 631 0 62 47 163
+279 594 281 524 466 1115 541 1729 208 1698 -405 3482 -1659 4833 -276 297
+-695 646 -1090 908 -408 270 -785 462 -1266 645 -152 58 -205 72 -205 55z"/>
+        </g>
+    </svg>
+</p>
+    <span>Осталось 5 дней!</span>
+</div>
+<p>Товарищи, у нас осталось мало времени!
+</a></p>
+</div>
+</div>
+<div id="admonition-Математика" class="admonition quote docs-card">
+<div class="admonition-title">
+<p>Математика</p>
+<p><a class="admonition-anchor-link" href="#admonition-Математика"></a></p>
+</div>
+<div>
+<a class="docs-card-link" href="http://localhost:3000/02/overview.html">
+<div class="docs-card-visit">
+    <?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<p>
+    <svg width="72px" height="72px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <title>calculator</title>
+        <path d="M24 5h-16c-0.553 0-1 0.447-1 1v21c0 0.552 0.447 1 1 1h16c0.552 0 1-0.448 1-1v-21c0-0.553-0.448-1-1-1zM9 15h2v2h-2v-2zM9 18h2v2h-2v-2zM9 21h2v2h-2v-2zM14 26h-5v-2h5v2zM14 23h-2v-2h2v2zM14 20h-2v-2h2v2zM14 17h-2v-2h2v2zM17 26h-2v-2h2v2zM17 23h-2v-2h2v2zM17 20h-2v-2h2v2zM17 17h-2v-2h2v2zM20 26h-2v-2h2v2zM20 23h-2v-2h2v2zM20 20h-2v-2h2v2zM20 17h-2v-2h2v2zM23 26h-2v-5h2v5zM23 20h-2v-2h2v2zM23 17h-2v-2h2v2zM23 13h-14v-6h14v6z"></path>
+    </svg>
+</p>
+    <span>В разработке...</span>
+</div>
+<p>Пока руки не доходят сделать, а надо ли?
+</a></p>
+</div>
+</div>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next" href="01/overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next" href="01/overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

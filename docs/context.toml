@@ -1,0 +1,12 @@
+# Project configuration
+# =====================
+
+name = "Материалы для подготовки к ОГЭ"
+root = "http://localhost:3000"
+#root = "https://ftl-sdamgia.ru"
+
+# Contact
+# =======
+
+email = "eduardkrivoshapkin5@gmail.com"
+github = "https://github.com/SchoolDocs"
