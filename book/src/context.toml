@@ -2,8 +2,9 @@
 # =====================
 
 name = "Материалы для подготовки к ОГЭ"
-root = "http://localhost:3000"
+#root = "http://localhost:3000"
 #root = "https://ftl-sdamgia.ru"
+root = "https://buttersus.github.io/SchoolDocs"
 
 # Contact
 # =======
